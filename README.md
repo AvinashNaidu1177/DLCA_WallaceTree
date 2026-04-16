@@ -79,25 +79,6 @@ Optimized	6	4	~66
 Reduced gate count
 Cleaner structure using generate blocks
 Better readability and maintainability
-⚠️ Notes
-Final addition uses a ripple carry adder
-For larger designs, a carry-lookahead adder (CLA) would improve speed
-This implementation is optimized for simplicity and clarity (ideal for learning & labs)
-▶️ How to Run
-Using ModelSim / Icarus Verilog:
-iverilog wallace_4x4.v -o wallace
-vvp wallace
-gtkwave wallace_4x4.vcd
-📌 Output Example
-===========================================
-  Wallace Tree 4x4 Multiplier - Full Test
-===========================================
-256 passed, 0 failed
-ALL TESTS PASSED
-===========================================
-📎 File Reference
-
-Code implementation used in this project:
 
 💡 Future Improvements
 Implement Dadda Tree multiplier

@@ -1,16 +1,16 @@
-🚀 4×4 Wallace Tree Multiplier (Verilog)
+4×4 Wallace Tree Multiplier (Verilog)
 
 This project implements a 4×4 Wallace Tree Multiplier in Verilog along with a complete testbench for functional verification.
 
 It demonstrates how partial products can be efficiently reduced using half adders and full adders to achieve faster multiplication compared to traditional methods.
 
-📌 Features
+Features
 ✅ 4-bit × 4-bit multiplication
 ✅ Wallace Tree reduction technique
 ✅ Optimized adder usage (reduced gate count)
 ✅ Fully verified using exhaustive testbench (256 cases)
 ✅ Waveform dump support (.vcd file)
-🧠 Concept Overview
+Concept Overview
 
 A Wallace Tree Multiplier improves multiplication speed by:
 
@@ -22,7 +22,7 @@ Performing a final addition to produce the result
 
 Unlike ripple-based multiplication, this reduces the number of sequential addition stages.
 
-🏗️ Architecture
+Architecture
 1. Partial Product Generation
 
 Each bit of input A is ANDed with each bit of input B.
@@ -48,7 +48,7 @@ Where:
 
 vec_s = sum bits
 vec_c = carry bits
-⚙️ Modules
+Modules
 🔹 Half Adder
 Adds 2 bits
 Outputs: Sum, Carry
@@ -60,7 +60,7 @@ Core module implementing multiplication logic
 🔹 Testbench (tb_wallace_4x4)
 Tests all 256 input combinations
 Compares output with A * B
-🧪 Testbench Details
+Testbench Details
 Iterates through all values of A and B (0–15)
 Checks correctness using:
 if (P === A * B)
@@ -71,16 +71,16 @@ Fail count
 Dumps waveform file:
 
 wallace_4x4.vcd
-📊 Optimization Summary
+Optimization Summary
 Version	Half Adders	Full Adders	Approx Gates
 Original	2	7	~73
 Optimized	6	4	~66
-✅ Improvements
+Improvements
 Reduced gate count
 Cleaner structure using generate blocks
 Better readability and maintainability
 
-💡 Future Improvements
+Future Improvements
 Implement Dadda Tree multiplier
 Replace ripple adder with CLA
 Extend to 8×8 or 16×16 multiplier
